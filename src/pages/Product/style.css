@@ -1,0 +1,13 @@
+.demo-card-wide{
+    width: 98%;
+    margin: 2%;
+}
+
+img{
+    width:100%;
+}
+
+.mdl-color-text--accent-contrast{
+    margin: 25px 0;
+    display: block;
+}
