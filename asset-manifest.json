@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/fiap-react/static/css/main.96ff3cfc.chunk.css",
+    "main.js": "/fiap-react/static/js/main.58c1a8c7.chunk.js",
+    "main.js.map": "/fiap-react/static/js/main.58c1a8c7.chunk.js.map",
+    "runtime~main.js": "/fiap-react/static/js/runtime~main.4f4220b6.js",
+    "runtime~main.js.map": "/fiap-react/static/js/runtime~main.4f4220b6.js.map",
+    "static/js/2.889199ce.chunk.js": "/fiap-react/static/js/2.889199ce.chunk.js",
+    "static/js/2.889199ce.chunk.js.map": "/fiap-react/static/js/2.889199ce.chunk.js.map",
+    "index.html": "/fiap-react/index.html",
+    "precache-manifest.77457b4670dfaa7cfeeabebb5e82e53d.js": "/fiap-react/precache-manifest.77457b4670dfaa7cfeeabebb5e82e53d.js",
+    "service-worker.js": "/fiap-react/service-worker.js",
+    "static/css/main.96ff3cfc.chunk.css.map": "/fiap-react/static/css/main.96ff3cfc.chunk.css.map"
+  }
+}
