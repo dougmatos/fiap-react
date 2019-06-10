@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8413843607a01d6b798d57ec10183a07",
+    "revision": "c56cd2bbc3fe23a0eb691d7ef9d326cb",
     "url": "/fiap-react/index.html"
   },
   {
-    "revision": "36a09c1de1a93eddb68d",
+    "revision": "fd0dc8a02452ff1f490f",
     "url": "/fiap-react/static/css/main.96ff3cfc.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/fiap-react/static/js/2.889199ce.chunk.js"
   },
   {
-    "revision": "36a09c1de1a93eddb68d",
-    "url": "/fiap-react/static/js/main.d9aa2df2.chunk.js"
+    "revision": "fd0dc8a02452ff1f490f",
+    "url": "/fiap-react/static/js/main.b5b3c285.chunk.js"
   },
   {
     "revision": "76f3dd4e9f4f5da98ae8",
