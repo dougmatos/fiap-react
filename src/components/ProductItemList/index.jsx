@@ -30,7 +30,7 @@ export class ProductItemList extends Component{
                     <h5>{product.title}</h5>
                     <span>R$ {FormatterService.formatPrice(product.price)}</span>&nbsp;&nbsp;|&nbsp;&nbsp;
                     <span>{FormatterService.formatSold(product.sold_quantity)}</span>&nbsp;&nbsp;|&nbsp;&nbsp;
-                    <Link to={`/product/${product.id}`}>mais informações</Link>
+                    <Link to={`/fiap-react/product/${product.id}`}>mais informações</Link>
                 </div>
             </li>
         );

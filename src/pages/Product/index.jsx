@@ -27,10 +27,10 @@ class Product extends Component {
         return (
             <Fragment>
                 <div className="mdl-grid">
-                    <div className="demo-card-wide mdl-cell mdl-cell--12-col mdl-card mdl-shadow--3dp"> 
+                    <div className="demo-card-wide mdl-cell mdl-cell--12-col mdl-card mdl-shadow--3dp main-wrapper"> 
                         <div className="mdl-grid">
                             <div className="mdl-cell mdl-cell--12-col">
-                                <Link to={`/`}>Voltar para a busca</Link>
+                                <Link to={`/fiap-react/`}>Voltar para a busca</Link>
                             </div>
                             <div className="mdl-cell mdl-cell--12-col-phone mdl-cell--4-col-desktop mdl-cel--1-offset-desktop product--image">
                                 <img alt="imagem do produto" src={data.pictures !== undefined ? data.pictures[0].secure_url : ""} />

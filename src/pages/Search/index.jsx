@@ -45,9 +45,11 @@ class Search extends Component {
     render() {
         const { data } = this.state;
         return (
-            <div className={"demo-card-wide mdl-card mdl-shadow--3dp main-wrapper"}> 
-                <TextFieldSearch onTextChange={this.onSearch.bind(this)}  />
-                {this.renderSearch(data || [])}
+            <div className="mdl-grid">
+                <div className="mdl-cell--12-col mdl-card mdl-shadow--3dp main-wrapper"> 
+                    <TextFieldSearch onTextChange={this.onSearch.bind(this)}  />
+                    {this.renderSearch(data || [])}
+                </div>
             </div>
         );
     }
