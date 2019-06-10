@@ -2,7 +2,7 @@
   "name": "fiap-react-17mob",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://dougmatos.github.io/fiap-react/",
+  "homepage": "https://dougmatos.github.io/fiap-react/",
   "dependencies": {
     "axios": "^0.18.0",
     "material-design-lite": "^1.3.0",

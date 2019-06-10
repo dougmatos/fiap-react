@@ -1,0 +1,13 @@
+.main-wrapper{
+    margin: 2%;
+    width: 96%; 
+    padding: 2%;
+}
+.main-wrapper ul{
+    list-style: none;
+    padding: 0;
+}
+.main-wrapper .msg-busca{
+    margin-top: 25px;
+    margin-left: 5px;
+}

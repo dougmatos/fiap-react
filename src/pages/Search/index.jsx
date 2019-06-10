@@ -1,56 +1,53 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import axios from 'axios';
-import { isTemplateElement } from '@babel/types';
+import { ProductService } from "../../services/Product.service";
+import { TextFieldSearch } from "../../components/TextFieldSearch";
+import { ProductItemList } from "../../components/ProductItemList";
+
+import "./style.css";
 
 class Search extends Component {
 
     constructor(){
         super();
-        this.onSearch = this.onSearch.bind(this);
-
         this.state = {
-            data: []
+            data: [],
+            keyWord: "",
+            buscando: false
         };
     }
 
-    onSearch(event){
-
-        const value = event.currentTarget.value;
-
-        if(value.length === 0){
-            this.setState({ data: [] });
-        } else if(value.length > 3){
-            axios.get(`https://api.mercadolibre.com/sites/MLB/search?q=${value}`)
-            .then((data) => this.setState({ data: data.data.results }));
-        }
+    onSearch(keyWord){
+        this.setState({keyWord, buscando: true});
+        
+        ProductService.getByKeyWord(keyWord)
+            .then(data => this.setState({data: data, buscando: false}))
+            .catch(err => { alert(err); this.setState({buscando: false}); });
     }
 
-    renderItem(item){
-        return(
-            <li key={item.id}>
-                <span>{item.id}</span> &nbsp;&bull;&nbsp;
-                <span>{item.title}</span>
-                &nbsp;|&nbsp;
-                <Link to={`/product/${item.id}`}>Abrir o produto</Link>
-            </li>
+    renderSearch(listItems){
+
+        let message = (text) => (<div className="msg-busca">{text}</div>);
+
+        if (this.state.buscando) return message(
+            <span style={{fontSize:"24px"}}>Buscando... </span>
+        );
+        if (this.state.keyWord === "") return message(
+            <span style={{ color: "#888" }}>Digite uma palavra para buscar</span>
+        );
+        if (listItems.length === 0) return message(
+            <span>Não encontramos produtos com o texto <strong>{this.state.keyWord}</strong></span>
+        );
+        return (
+            <ul>{listItems.map(item => <ProductItemList key={item.id} product={item} />)}</ul>
         );
     }
 
-
     render() {
-
         const { data } = this.state;
-
         return (
-            <div className={"demo-card-wide mdl-card mdl-shadow--3dp"} style={{margin: "2%", width: "94%", padding: '2%'}}> 
-                <label>Digite no campo abaixo o que você quer procurar</label>
-                <input type="text" onChange={ this.onSearch } style={{width: "94%", padding: "2%", marginTop: '10px', fontSize: "16px"}} />
-                
-                <ul>
-                {(data || []).map(this.renderItem)}
-                </ul>
-                
+            <div className={"demo-card-wide mdl-card mdl-shadow--3dp main-wrapper"}> 
+                <TextFieldSearch onTextChange={this.onSearch.bind(this)}  />
+                {this.renderSearch(data || [])}
             </div>
         );
     }
